@@ -40,5 +40,40 @@ PreRequisites
          List<EmployeeDto> employeeDtos = employees.stream().map(p -> new EmployeeDto(p)).collect(Collectors.toList());
   
   
+  Docker :
+  
+    Building Image :
+        
+	 Docker build -t somisettyv/springjpa .
+	 
+    Check Image    :
+        
+	 Docker Images 
+	 
+    Get the Container List 
+       
+         Docker ps -a
+	 
+    Run Docker Container :
+       
+         Docker run -p 8080:8080 somisettyv/springjpa
+	 
+	 
+    Push to Docker hub: 
+    
+          docker login --username=somisettyv --email=somisettyv@yahoo.com
+
+          docker tag memberservice somisettyv/springjpa
+
+          docker push somisettyv/springjpa
+
+          docker rmi -f memberservice
+	  
+	  Get the Image and Run
+
+             docker run -p 8889:8080 somisettyv/springjpa
+	 
+	 
+	 
   
   
